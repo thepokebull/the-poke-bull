@@ -1,0 +1,28 @@
+{
+  "name": "cc-gacha-poc",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Headless proof-of-concept: Sign-In-With-Solana against Collector Crypt's Privy auth + read on-chain USDC balance. No funds required.",
+  "scripts": {
+    "gen-key": "node gen-key.js",
+    "login": "node run.js login",
+    "balance": "node run.js balance",
+    "start": "node run.js all",
+    "dashboard": "node dashboard/server.js",
+    "bot": "node bot.js once",
+    "bot:loop": "node bot.js loop",
+    "bot:demo": "node bot.js demo"
+  },
+  "dependencies": {
+    "@metaplex-foundation/mpl-core": "^1.10.0",
+    "@metaplex-foundation/mpl-token-metadata": "^3.4.0",
+    "@metaplex-foundation/umi": "^1.5.1",
+    "@metaplex-foundation/umi-bundle-defaults": "^1.5.1",
+    "@solana/spl-token": "^0.4.9",
+    "@solana/web3.js": "^1.95.4",
+    "bs58": "^6.0.0",
+    "express": "^4.22.2",
+    "tweetnacl": "^1.0.3"
+  }
+}

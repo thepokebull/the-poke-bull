@@ -1,0 +1,34 @@
+# ── secrets / keys (NEVER commit) ──
+.env
+.env.*
+wallet.key
+wallet.key.*
+wallet.json
+*.key
+*.pem
+*.keypair
+
+# ── local-only admin (never publish) ──
+dashboard/local.js
+lib/local.js
+bot-control.json
+
+# ── runtime state / logs ──
+airdrop-state.json
+dashboard/pulls.json
+probe-*.mjs
+
+# ── local test harness / captures ──
+test-open.mjs
+test-open-capture.json
+my-test-wallet.key
+
+# ── third-party brand/media assets (not distributed — supply your own) ──
+dashboard/public/*.webm
+dashboard/public/*.png
+dashboard/public/sprites/
+
+# ── deps / os ──
+node_modules
+.DS_Store
+npm-debug.log*
