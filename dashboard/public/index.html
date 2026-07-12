@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Tauros</title>
-<meta name="description" content="Creator rewards, auto-claimed and spent opening Collector Crypt Pokémon gacha packs — every graded card airdropped to $TAUROS holders." />
-<link rel="icon" href="/tauros.png" />
+<title>PACKS</title>
+<meta name="description" content="Creator rewards, auto-claimed and spent opening Pokémon Pro Packs on Courtyard — every graded card airdropped to $PACKS holders." />
+<link rel="icon" href="/pack-logo.png" />
 <link rel="stylesheet" href="/theme.css" />
 <style>
   .wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
@@ -20,14 +20,14 @@
   .m-eyebrow{position:relative;z-index:1;color:var(--red);font-weight:800;font-size:12.5px;letter-spacing:.18em;text-transform:uppercase}
   .m-title{position:relative;z-index:1;font-family:var(--display);font-weight:700;font-size:clamp(28px,5vw,48px);
     letter-spacing:-.01em;margin:8px 0 20px;color:var(--ink)}
-  .machine{position:relative;z-index:1;display:inline-block;width:clamp(300px,58vw,560px);cursor:pointer;
+  /* Pack art is portrait (roughly 7:10), so it's sized narrower than the old
+     machine or it runs off the fold. No mask: the PNG is already cut out. */
+  .machine{position:relative;z-index:1;display:inline-block;width:clamp(210px,32vw,330px);cursor:pointer;
     filter:drop-shadow(0 30px 34px rgba(74,52,20,.34))}
-  .machine-vid{width:100%;height:auto;display:block;
-    -webkit-mask:url(/machine-mask.png) center/100% 100% no-repeat;
-            mask:url(/machine-mask.png) center/100% 100% no-repeat}
+  .machine-vid{width:100%;height:auto;display:block}
   .machine.shake{animation:shake .5s ease-in-out 3}
   @keyframes shake{0%,100%{transform:translateX(0) rotate(0)}25%{transform:translateX(-6px) rotate(-1.2deg)}75%{transform:translateX(6px) rotate(1.2deg)}}
-  .machine-base{position:relative;z-index:1;width:min(60%,420px);height:34px;margin:-6px auto 0;border-radius:50%;
+  .machine-base{position:relative;z-index:1;width:min(38%,270px);height:26px;margin:-6px auto 0;border-radius:50%;
     background:radial-gradient(ellipse,rgba(74,52,20,.26),transparent 70%);filter:blur(4px)}
   .m-controls{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;gap:16px;margin-top:22px}
   .pills{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
@@ -125,8 +125,8 @@
   <div class="hdr-inner">
     <div class="hdr-left">
       <a class="hdr-brand" href="/">
-        <img class="hdr-logo" src="/tauros.png" alt="Tauros" />
-        <span class="hdr-name">Tauros</span>
+        <img class="hdr-logo" src="/pack-logo.png" alt="Gacha Packs" />
+        <span class="hdr-name">PACKS</span>
       </a>
     </div>
     <div class="hdr-right">
@@ -137,10 +137,10 @@
         <a class="nav-btn" href="/airdrops">Airdrops</a>
         <a class="nav-btn" href="/transparency">Transparency</a>
       </nav>
-      <a class="icon-btn" id="linkX" href="https://x.com/thepokebull" aria-label="X" title="X" target="_blank" rel="noopener">
+      <a class="icon-btn" id="linkX" href="https://x.com/thegachamachine" aria-label="X" title="X" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.451-6.231zm-1.161 17.52h1.833L7.084 4.126H5.117l11.966 15.644z"/></svg>
       </a>
-      <a class="icon-btn" id="linkGithub" href="https://github.com/thepokebull/the-poke-bull" aria-label="GitHub" title="GitHub" target="_blank" rel="noopener">
+      <a class="icon-btn" id="linkGithub" href="https://github.com/gachapacks/gacha-packs" aria-label="GitHub" title="GitHub" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.37.5 0 5.78 0 12.29c0 5.2 3.44 9.61 8.2 11.16.6.11.82-.26.82-.58 0-.28-.01-1.04-.02-2.04-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.33-1.76-1.33-1.76-1.09-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.49 1 .11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.31-.54-1.53.11-3.19 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6.01 0c2.29-1.55 3.3-1.23 3.3-1.23.65 1.66.24 2.88.12 3.19.77.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.62-5.49 5.92.43.37.81 1.1.81 2.22 0 1.6-.01 2.9-.01 3.29 0 .32.22.7.83.58C20.56 21.9 24 17.49 24 12.29 24 5.78 18.63.5 12 .5z"/></svg>
       </a>
     </div>
@@ -151,15 +151,13 @@
 <section class="machine-stage">
   <div class="m-eyebrow">Open live</div>
   <div class="machine" id="machine">
-    <video class="machine-vid" id="machineVid" autoplay loop muted playsinline preload="auto">
-      <source src="/machine.webm" type="video/webm">
-    </video>
+    <img class="machine-vid" id="machineVid" src="/pack.png" alt="Pokémon Pro Pack" />
   </div>
   <div class="machine-base"></div>
   <div class="m-controls">
     <div class="pills">
       <span class="pill"><span class="dot"></span><span id="pillLive">Live</span></span>
-      <span class="pill">Pack · <b>PKMN&nbsp;50</b></span>
+      <span class="pill">Pack · <b>Pokémon&nbsp;Pro&nbsp;Pack</b></span>
       <span class="pill">Cards Airdropped · <b id="hCards">0</b></span>
     </div>
   </div>
@@ -172,7 +170,7 @@
   </div>
   <div class="tiles three">
     <div class="tile"><div class="k">Unclaimed rewards</div><div class="v" id="tRewards">-</div></div>
-    <div class="tile hl"><div class="k">USDC balance</div><div class="v" id="tUsdc">-</div></div>
+    <div class="tile hl"><div class="k">ETH balance</div><div class="v" id="tUsdc">-</div></div>
     <div class="tile o"><div class="k">Cards airdropped</div><div class="v" id="tCards">0</div></div>
   </div>
   <div class="ca-row">
@@ -190,9 +188,9 @@
   </div>
   <div class="steps">
     <div class="stepcard"><div class="num">1</div><h3>Track</h3><p>The coin earns creator rewards on every trade. We watch the on-chain vault in real time.</p></div>
-    <div class="stepcard"><div class="num">2</div><h3>Claim &amp; swap</h3><p>Above threshold, rewards are claimed and swapped SOL → USDC through Jupiter.</p></div>
-    <div class="stepcard"><div class="num">3</div><h3>Open</h3><p>USDC opens $50 Collector Crypt Pokémon gacha packs — each a real graded card.</p></div>
-    <div class="stepcard"><div class="num">4</div><h3>Airdrop</h3><p>Every card is airdropped to an eligible $TAUROS holder and shown here forever.</p></div>
+    <div class="stepcard"><div class="num">2</div><h3>Claim &amp; bridge</h3><p>Above threshold, rewards are claimed and bridged into ETH on Ethereum mainnet from Robinhood.</p></div>
+    <div class="stepcard"><div class="num">3</div><h3>Open</h3><p>That ETH opens Pokémon Pro Packs on Courtyard — each a real graded card.</p></div>
+    <div class="stepcard"><div class="num">4</div><h3>Airdrop</h3><p>Every card is airdropped to an eligible holder's EVM wallet, the same address they use on Robinhood Chain, and shown here forever.</p></div>
   </div>
 </section>
 
@@ -205,8 +203,8 @@
 </section>
 
 <footer class="footer">
-  <div class="fl"><img src="/tauros.png" alt="" /><span>Tauros</span></div>
-  <div>Powered by <a href="https://gacha.collectorcrypt.com/" target="_blank" rel="noopener">Collector Crypt</a></div>
+  <div class="fl"><img src="/pack-logo.png" alt="" /><span>Gacha Packs</span></div>
+  <div>Powered by <a href="https://courtyard.io/vending-machine/pkmn-pro-pack" target="_blank" rel="noopener">Courtyard</a></div>
 </footer>
 
 <!-- reveal overlay -->
@@ -340,7 +338,7 @@ async function playReveal(card){
   $("#dVal").textContent = card.value ? "$"+Number(card.value).toLocaleString() : "-";
   const adl=$("#adLine");
   const tx=(card.airdropTx&&card.airdropTx!=="dry-run"&&card.airdropTx.length>40)?card.airdropTx:"";
-  if(tx){ $("#dAirdropTx").href="https://solscan.io/tx/"+tx; adl.style.display="flex"; }
+  if(tx){ $("#dAirdropTx").href="https://polygonscan.com/tx/"+tx; adl.style.display="flex"; }
   else adl.style.display="none";
   if(card.airdropTo||tx) bumpAirdrops();
   detail.classList.add("show");
@@ -357,8 +355,8 @@ function cardHTML(c,fresh){const img=c.image||c.front||"";
     <div class="imgwrap">${img?`<img loading="lazy" src="${img}" alt="">`:""}</div>
     <div class="body"><div class="nm">${c.name}</div>
       <div class="row"><span class="grade ${gradeClass(c.grader||c.grade)}">${c.grade||""}</span>
-      ${c.value?`<span class="cval">$${Number(c.value).toLocaleString()}</span>`:(c.mint?`<a class="mintlink" href="https://solscan.io/token/${c.mint}" target="_blank" rel="noopener">${short(c.mint)}</a>`:"")}</div>
-      <div class="cardto"><span>airdropped</span>${tx?` <span class="sep">·</span> <a class="txlink" href="https://solscan.io/tx/${tx}" target="_blank" rel="noopener">view tx ↗</a>`:``}</div>
+      ${c.value?`<span class="cval">$${Number(c.value).toLocaleString()}</span>`:(c.mint?`<a class="mintlink" href="https://polygonscan.com/token/${c.mint}" target="_blank" rel="noopener">${short(c.mint)}</a>`:"")}</div>
+      <div class="cardto"><span>airdropped</span>${tx?` <span class="sep">·</span> <a class="txlink" href="https://polygonscan.com/tx/${tx}" target="_blank" rel="noopener">view tx ↗</a>`:``}</div>
     </div></div>`;}
 function prependCard(c,fresh){
   const host=$("#vault"); if(host.querySelector(".empty")) host.innerHTML="";
@@ -403,7 +401,7 @@ const live={rewardsUsd:0, usdc:0, phase:"idle"};
 function renderLive(){
   const rw=$("#tRewards"), uu=$("#tUsdc");
   if(rw) rw.innerHTML = live.phase==="claiming" ? '<span class="ph">CLAIMING…</span>' : money(live.rewardsUsd);
-  if(uu) uu.innerHTML = live.phase==="swapping" ? '<span class="ph">SWAPPING…</span>'
+  if(uu) uu.innerHTML = live.phase==="swapping" ? '<span class="ph">BRIDGING…</span>'
                       : live.phase==="opening" ? '<span class="ph">OPENING…</span>'
                       : money(live.usdc);
 }
